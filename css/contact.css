@@ -1,0 +1,662 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures the video covers the entire container */
+    z-index: -1; /* Place the video behind other content */
+}
+#mobile-vedio{
+    display: none;
+
+}
+
+.header{
+    width:100%;
+    background-color:rgba(0,0,0,0.5);
+    position: fixed;
+    top:0;
+    left: 0;
+    height:150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.log img{
+    width: 130px;
+}
+
+.header button{
+    width: 50px;
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    outline: none;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 50px;
+
+    
+}
+.header button .bar{
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 10px;
+
+}
+.links{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 2;
+    background-color:rgb(255, 69, 0,0.3);
+    transform: translateX(-250px);
+    transition: 0.5s;
+
+}
+.link{
+    display: flex;
+    padding: 12px 15px;
+    font-size: 26px;
+    font-weight: 600;
+    text-decoration: none;
+    justify-content: center;
+    align-content: center;
+    color:black;
+    
+    
+
+}
+.link.active,.link:hover{
+    color:white;
+    background: radial-gradient(orangered,gray);
+    transition: 0.9s;
+}
+
+
+.open .links{
+    transform: translateX(0px);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2) ;
+}
+.nav-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter:blur(2px);
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgpa(0,0,0,0.2);
+    transition: 0.3s;
+}
+.open .nav-overlay{
+    visibility: visible;
+    opacity: 1;
+}
+
+.reg{
+    font-size:22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background:radial-gradient(red,orangered,black);
+    border-radius: 50px 0 ;
+    text-shadow: 0 0 15px white;
+    transition: 0.9s;
+    font-weight: bold;
+    
+}
+.reg:hover{
+    border-radius: 0 50px ;
+    text-shadow: 0 0 15px black;
+}
+/* .style.css */
+
+/* contact */
+
+.con-1{
+    width: 100vw;
+    background-color: rgb(255, 250, 250,0.6);
+    margin-top: 200px;
+    display: flex;
+    padding: 40px 20px;
+    flex-direction: column;
+    border-radius: 20px;
+    
+}
+.about-con-1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-content: center;
+    flex-direction: column;
+
+}
+.title-about{
+    width: 100%;
+    text-align: center; 
+    margin-bottom: 20px;  
+}
+.title-descript h2{
+     font-size: 50px;
+     text-align: center;
+     text-transform: uppercase;
+     background: radial-gradient(red,rgb(0, 136, 255),orangered,black);
+     color: transparent;
+     background-clip: text;
+     
+
+}
+
+.con1-2{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 30px auto ;
+}
+
+.contact-box-1{
+    width: 300px;
+    margin: 10px;
+    
+
+}
+.contact-box-1 h1{
+    font-size:35px;
+    font-weight:bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background:repeating-radial-gradient(red,rgb(0, 89, 255),orangered,rgb(0, 89, 255)) ;
+    color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+}
+
+.contact-box-1 h2{
+    color: red;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+ li{
+    list-style: none;
+}
+
+
+/* box-2 */
+
+.con-2{
+    color: white;
+    width: 100vw;
+    margin-top:80px;
+    background-color: rgb(0, 0, 0,0.4);
+    display: flex;
+    flex-flow:row wrap;
+
+    border-radius:20px 20px 0 0;
+}
+.con-2 .logo img{
+    width:350px;
+    height:350px;
+    animation: move 0.6s linear infinite;
+    
+}
+
+@keyframes move {
+    0%{
+        rotate: 0deg;
+    }
+
+    15%{
+        rotate:10deg;
+    }
+    30%{
+        rotate:-10deg;
+    }
+    55%{
+        rotate: 5deg;
+    }
+    70%{
+        rotate:-5deg
+    }
+    100%{
+        rotate:0deg
+    }
+}
+
+
+.con-2 .logo img{
+    width:350px;
+    height:350px;
+    
+}
+.con-2 .logo{
+    width: 100%;
+    text-align: center;
+    margin:50px ;
+}
+
+.event-box{
+
+    padding: 10px;
+    width: 300px;
+}
+
+.same-line{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+
+
+
+.event-box .title h1{
+    font-size:50px;
+    color: orangered;
+    text-shadow: 0 0 3px white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.points{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.icons i{
+   font-size:60px;
+   color: white;
+   margin-left: 10px;
+}
+.icons{
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+
+}
+
+.icons i:hover{
+    cursor: pointer;
+    background:linear-gradient(blue,orangered);
+    color: transparent;
+    background-clip: text;
+    transform: scale(1.2);
+}
+
+.developed{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+.developed h2{
+    font-size:50px;
+    background: linear-gradient(to right,orangered,blue);
+    color:transparent;
+    background-clip: text;
+}
+
+
+
+
+
+
+
+/* contact */
+
+/* moblie */
+@media (max-width:450px){
+
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    
+    body,html{
+        width: 100vw;
+        height: 100vh;
+    }
+
+/* navigation part */
+    .header button{
+        width: 50px;
+        flex-shrink: 0;
+        background: none;
+        border: none;
+        outline: none;
+        display: flex;
+        color: white;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-right: 50px;
+    
+        
+    }
+    .header button .bar{
+        width: 100%;
+        height: 4px;
+        background-color: white;
+        border-radius: 10px;
+    
+    }
+
+    .header{
+        width: 100vw;
+        background-color:rgba(0,0,0,0.5);
+        position: fixed;
+        top:0;
+        left: 0;
+        height:150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+    }
+    
+
+    #mobile-vedio{
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        display: flex;
+        object-fit: cover; /* Ensures the video covers the entire container */
+        z-index: -1;
+        height: 100%;
+        width: 100vw;
+        
+     }
+     #myVideo{
+         display:none;
+     }
+
+     .nav-overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter:blur(2px);
+        visibility: hidden;
+        opacity: 0;
+        background-color: rgpa(0,0,0,0.2);
+        transition: 0.3s;
+    }
+    .open .nav-overlay{
+        visibility: visible;
+        opacity: 1;
+    }
+    .links{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 200px;
+        z-index: 2;
+        background-color:rgb(255, 69, 0,0.3);
+        transform: translateX(-250px);
+        transition: 0.5s;
+    
+    }
+
+    .reg{
+        font-size: 22px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background:radial-gradient(red,orangered,black);
+        border-radius: 50px 0 ;
+        text-shadow: 0 0 15px white;
+        
+    }
+    .reg:hover{
+        border-radius: 0 50px ;
+        text-shadow: 0 0 15px black;
+    }
+/* navigation part */
+
+
+
+.con-1{
+    width: 100vw;
+    background-color: rgb(255, 250, 250,0.6);
+    margin-top: 200px;
+    display: flex;
+    padding: 40px 20px;
+    flex-direction: column;
+}
+.about-con-1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-content: center;
+    flex-direction: column;
+
+}
+.title-about{
+    width: 100%;
+    text-align: center; 
+    margin-bottom: 20px;  
+}
+.title-about img{
+    width: 350px;
+}
+.title-descript h2{
+     font-size:32px;
+     text-align: center;
+     text-transform: uppercase;
+     background: radial-gradient(red,rgb(0, 136, 255),orangered,black);
+     color: transparent;
+     background-clip: text;
+     
+
+}
+
+.con1-2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 30px auto;
+    align-items: center;
+    
+}
+
+.contact-box-1{
+    width: 300px;
+    margin: 10px;
+    
+
+}
+.contact-box-1 h1{
+    font-size:30px;
+    font-weight:bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background:repeating-radial-gradient(red,rgb(0, 89, 255),orangered,rgb(0, 89, 255)) ;
+    color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+}
+
+.contact-box-1 h2{
+    color: red;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+ li{
+    list-style: none;
+}
+
+/* box-2 */
+
+.con-2{
+    color: white;
+    width: 100vw;
+    margin-top:80px;
+    background-color: rgb(0, 0, 0,0.4);
+    display: flex;
+    flex-flow:row wrap;
+
+    border-radius:20px 20px 0 0;
+}
+
+
+@keyframes move {
+    0%{
+        rotate: 0deg;
+    }
+
+    15%{
+        rotate:10deg;
+    }
+    30%{
+        rotate:-10deg;
+    }
+    55%{
+        rotate: 5deg;
+    }
+    70%{
+        rotate:-5deg
+    }
+    100%{
+        rotate:0deg
+    }
+}
+
+
+.con-2 .logo img{
+    width:280px;
+    height:280px;
+    animation: move 0.6s linear infinite;
+
+    
+}
+.con-2 .logo{
+    width: 100%;
+    text-align: center;
+    margin:50px ;
+}
+
+.event-box{
+
+    padding: 10px;
+    width: 300px;
+}
+
+.same-line{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+
+
+
+.event-box .title h1{
+    font-size:50px;
+    color: orangered;
+    text-shadow: 0 0 3px white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.points{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.icons i{
+   font-size:60px;
+   color: white;
+   margin-left: 10px;
+}
+.icons{
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+
+}
+
+.icons i:hover{
+    cursor: pointer;
+    background:linear-gradient(blue,orangered);
+    color: transparent;
+    background-clip: text;
+    transform: scale(1.2);
+}
+
+.developed{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:50px;
+}
+.developed h2{
+    font-size:26px;
+    background: linear-gradient(to right,orangered,blue);
+    color:transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px snow;
+}
+
+.con-2 .logo img{
+    width:250px;
+    height:250px;
+    
+}
+.con-2 .logo{
+    width: 100%;
+    text-align: center;
+    margin:50px ;
+}
+
+
+
+
+
+/* contact */
+
+/* box2 */
+
+
+
+
+
+}
+
+
+
